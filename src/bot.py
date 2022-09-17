@@ -8,7 +8,7 @@ import emoji
 
 class Bot:
 	def __init__(self):
-		self.bot = telebot.TeleBot("5677978685:AAHW7RuuniCaJQgStKHucealE11zc6Prh-g" , parse_mode=None )
+		self.bot = telebot.TeleBot(os.environ["bot_token"] , parse_mode=None )
 		self.echo_all = self.bot.message_handler(func=lambda m: True)(self.echo_all)
 
 	def run(self):
