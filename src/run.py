@@ -122,8 +122,6 @@ class Bot:
 
         @self.bot.message_handler(func=lambda m: True)
         def echo_all(message):
-            #write_json(message.json , "message.json")
-            #print(emoji.demojize(message.text))
 
             user = db.users.find_one(
                 {'chat.id' : message.chat.id}
@@ -160,5 +158,5 @@ class Bot:
 
 if __name__ == "__main__":
     bot1 = Bot(tele_bot=bot)
-    #bot1.run()
+  
 
