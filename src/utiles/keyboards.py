@@ -7,6 +7,7 @@ import emoji
 keys = SimpleNamespace(
    random_connect = ":busts_in_silhouette: Random Connect",
    setting = ":wrench: Setting",
+   exit = ":cross_mark: Exit"
 )
 
 
@@ -26,5 +27,13 @@ def create_keyboard(keys, row_width=2, resize_keyboard=True):
 
 
 keyboards = SimpleNamespace(
-    main = create_keyboard([keys.random_connect, keys.setting])
+    main = create_keyboard([keys.random_connect, keys.setting]),
+    exit = create_keyboard([keys.exit])
+)
+
+
+states = SimpleNamespace(
+   random_connect = "Random_connect",
+   main = "main",
+   connected = "connected"
 )
